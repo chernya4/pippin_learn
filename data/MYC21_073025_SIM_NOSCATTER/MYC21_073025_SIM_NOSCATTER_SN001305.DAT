@@ -1,0 +1,85 @@
+SURVEY:   LSST
+SNID:             1305  # integer or string assigned by survey team (required)
+ZP_FLUXCAL:  27.50  # mag = ZP_FLUXCAL - 2.5*log10(FLUXCAL) 
+SNTYPE:   1    # integer type; e.g. spec or phot classification
+RA:       148.535156  # deg (avg among obs)
+DEC:      1.268370  # deg (avg among obs)
+FILTERS:  ugrizY
+PIXSIZE:  0.2000  # arcsec 
+FAKE:     2  # simulated with snlc_sim.exe 
+MWEBV:    0.0243 +- 0.0000  # MW E(B-V) 
+MWXT_MAG:  0.114 0.089 0.062 0.046 0.036 0.030  # MW mag-XT per band
+PEAKMJD:  61206.000     # estimate for LC fit codes
+MJD_TRIGGER:       61206.023  
+MJD_DETECT_FIRST:  61206.000  
+MJD_DETECT_LAST:   61206.023  
+
+REDSHIFT_HELIO:   0.409514 +- 0.001000  # Helio 
+REDSHIFT_FINAL:   0.411139 +- 0.001000  # CMB (no VPEC corr) 
+MASK_REDSHIFT_SOURCE:   2 # grep MASK_REDSHIFT_SOURCE sndata.h  
+VPEC:                 0.00 +- 0.00      # v_pec correction
+LENSDMU:             0.000 +- 0.000      # DMU from lensing
+
+HOSTGAL_NMATCH:      0  
+HOSTGAL_NMATCH2:     0  
+
+# SIM-truth values
+SIM_MODEL_NAME:      BAYESN.T21  
+SIM_MODEL_INDEX:     13  # grep MODEL_ sntools.h | grep def
+SIM_GENTYPE:         1  # true GENTYPE 
+SIM_TYPE_NAME:       BAYESN.T21 
+SIM_TEMPLATE_INDEX:  0   # template index for SIMSED,NONIa
+SIM_LIBID:           263640    # LIBID index in SIMLIB file
+SIM_NGEN_LIBID:      1  
+SIMLIB_MSKOPT:       0  
+SIM_NOBS_UNDEFINED:  0  
+SIM_REDSHIFT_HELIO:  0.40710 
+SIM_REDSHIFT_CMB:    0.40872  
+SIM_REDSHIFT_HOST:       0.40710    # z of true host
+SIM_REDSHIFT_HOST_MATCH: 0.00000    # z of DDLR-matched host
+SIM_REDSHIFT_FLAG:   1  # SNSPEC
+SIM_VPEC:            -0.0   # km/sec) 
+SIM_HOSTLIB_GALID:   -9 
+SIM_HOSTLIB_NPAR:    0 
+SIM_DLMU:            41.7279   # mag   [ -5*log10(10pc/dL) ]
+SIM_LENSDMU:         0.0000   # mag 
+SIM_MUSHIFT:         0.0000   # user-defined shift 
+SIM_RA:              148.535156     # deg  
+SIM_DEC:             1.268370      # deg  
+SIM_MWRV:            3.100    # MilkyWay RV 
+SIM_MWEBV:           0.0243   # MilkyWay E(B-V) 
+SIMOPT_MWCOLORLAW:   99   # MW color-law option 
+SIMOPT_MWEBV:        3   # MWEBV option 
+SIM_WGT_POPULATION:  1.00000  # stretch x color * AV
+SIM_AVTAU:         0.000     # dN/dAV = exp(-AV/AVTAU) 
+SIM_AV:            0.018     # host extinction at 5510 A
+SIM_RV:            2.610     # CCM89 extinction param 
+SIM_MAGSMEAR_COH:    0.000     # coh model scatter 
+SIM_PEAKMJD:         61214.941    #  true PEAKMJD, days 
+SIM_MJD_EXPLODE:     -9.000    #  true MJD for explosion 
+SIM_THETA:        -0.027    # BayeSN lumi-par
+SIM_SEARCHEFF_MASK:  3  # bits 1,2=> found by software,spec 
+SIM_SEARCHEFF_SPEC:  1.0000  # spectro-search efficiency 
+SIM_TRESTMIN:        -6.35  # days 
+SIM_TRESTMAX:        14.94  # days 
+SIM_RISETIME_SHIFT:  0.0   # days 
+SIM_FALLTIME_SHIFT:  0.0   # days 
+
+# ugrizY filter-dependent quantities vs. 
+SIM_GALFRAC:  -9.000 -9.000 -9.000 -9.000 -9.000 -9.000  # F_gal/F_SNpeak for PSF=1''
+SIM_PEAKMAG:  -9.000 -9.000 -9.000 22.244 22.282 -9.000  # 
+SIM_EXPOSURE:     1.0    1.0    1.0    1.0    1.0    1.0  # 
+
+
+# ============================================ 
+# TEXT LIGHT CURVE OUTPUT: 
+#
+NOBS: 3 
+NVAR: 11 
+VARLIST: MJD BAND FIELD FLUXCAL FLUXCALERR PHOTFLAG GAIN ZPT PSF SKY_SIG SIM_MAGOBS 
+OBS: 61206.0014 LSST-i DDF  9.05878e+01  1.4231e+00 4096  1.000 35.580  2.40 2.816e+02  22.5988 
+TRIGGER:  trigger logic satisfied at MJD_TRIGGER=61206.0234
+OBS: 61206.0238 LSST-z DDF  8.53026e+01  3.2718e+00 6144  1.000 35.340  3.14 4.009e+02  22.6615 
+OBS: 61235.9624 LSST-i DDF  7.07578e+01  1.9505e+01    0  1.000 32.220  3.73 1.138e+02  22.8792 
+END_PHOTOMETRY: 
+

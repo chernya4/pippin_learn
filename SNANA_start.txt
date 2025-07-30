@@ -1,0 +1,6 @@
+source /global/cfs/cdirs/lsst/groups/TD/setup_td.sh
+cd $SNANA_LSST_ROOT/simlibs
+ls baseline_*
+
+
+the simulation code is snlc_sim.exe (snana.exe is the base code for reading/analysis)
