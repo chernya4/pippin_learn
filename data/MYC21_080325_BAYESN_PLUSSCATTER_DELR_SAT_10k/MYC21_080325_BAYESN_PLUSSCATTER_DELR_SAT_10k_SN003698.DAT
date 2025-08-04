@@ -1,0 +1,90 @@
+SURVEY:   LSST
+SNID:             3698  # integer or string assigned by survey team (required)
+ZP_FLUXCAL:  27.50  # mag = ZP_FLUXCAL - 2.5*log10(FLUXCAL) 
+SNTYPE:   1    # integer type; e.g. spec or phot classification
+RA:       59.111843  # deg (avg among obs)
+DEC:      -47.357574  # deg (avg among obs)
+FILTERS:  ugrizY
+PIXSIZE:  0.2000  # arcsec 
+FAKE:     2  # simulated with snlc_sim.exe 
+MWEBV:    0.0073 +- 0.0000  # MW E(B-V) 
+MWXT_MAG:  0.034 0.027 0.019 0.014 0.011 0.009  # MW mag-XT per band
+PEAKMJD:  61737.195     # estimate for LC fit codes
+MJD_TRIGGER:       61744.133  
+MJD_DETECT_FIRST:  61737.180  
+MJD_DETECT_LAST:   61764.207  
+
+REDSHIFT_HELIO:   0.010621 +- 0.001000  # Helio 
+REDSHIFT_FINAL:   0.010462 +- 0.001000  # CMB (no VPEC corr) 
+MASK_REDSHIFT_SOURCE:   2 # grep MASK_REDSHIFT_SOURCE sndata.h  
+VPEC:                 0.00 +- 0.00      # v_pec correction
+LENSDMU:             0.000 +- 0.000      # DMU from lensing
+
+HOSTGAL_NMATCH:      0  
+HOSTGAL_NMATCH2:     0  
+
+# SIM-truth values
+SIM_MODEL_NAME:      BAYESN.T21  
+SIM_MODEL_INDEX:     13  # grep MODEL_ sntools.h | grep def
+SIM_GENTYPE:         1  # true GENTYPE 
+SIM_TYPE_NAME:       BAYESN.T21 
+SIM_TEMPLATE_INDEX:  0   # template index for SIMSED,NONIa
+SIM_LIBID:           759189    # LIBID index in SIMLIB file
+SIM_NGEN_LIBID:      1  
+SIMLIB_MSKOPT:       0  
+SIM_NOBS_UNDEFINED:  0  
+SIM_REDSHIFT_HELIO:  0.01016 
+SIM_REDSHIFT_CMB:    0.01000  
+SIM_REDSHIFT_HOST:       0.01016    # z of true host
+SIM_REDSHIFT_HOST_MATCH: 0.00000    # z of DDLR-matched host
+SIM_REDSHIFT_FLAG:   1  # SNSPEC
+SIM_VPEC:            -0.0   # km/sec) 
+SIM_HOSTLIB_GALID:   -9 
+SIM_HOSTLIB_NPAR:    0 
+SIM_DLMU:            33.1754   # mag   [ -5*log10(10pc/dL) ]
+SIM_LENSDMU:         0.0000   # mag 
+SIM_MUSHIFT:         0.0000   # user-defined shift 
+SIM_RA:              59.111843     # deg  
+SIM_DEC:             -47.357574      # deg  
+SIM_MWRV:            3.100    # MilkyWay RV 
+SIM_MWEBV:           0.0073   # MilkyWay E(B-V) 
+SIMOPT_MWCOLORLAW:   99   # MW color-law option 
+SIMOPT_MWEBV:        3   # MWEBV option 
+SIM_WGT_POPULATION:  1.00000  # stretch x color * AV
+SIM_AVTAU:         0.000     # dN/dAV = exp(-AV/AVTAU) 
+SIM_AV:            0.337     # host extinction at 5510 A
+SIM_RV:            2.610     # CCM89 extinction param 
+SIM_MAGSMEAR_COH:    0.000     # coh model scatter 
+SIM_PEAKMJD:         61726.219    #  true PEAKMJD, days 
+SIM_MJD_EXPLODE:     -9.000    #  true MJD for explosion 
+SIM_THETA:        -0.802    # BayeSN lumi-par
+SIM_SEARCHEFF_MASK:  3  # bits 1,2=> found by software,spec 
+SIM_SEARCHEFF_SPEC:  1.0000  # spectro-search efficiency 
+SIM_TRESTMIN:        -5.93  # days 
+SIM_TRESTMAX:        37.64  # days 
+SIM_RISETIME_SHIFT:  0.0   # days 
+SIM_FALLTIME_SHIFT:  0.0   # days 
+
+# ugrizY filter-dependent quantities vs. 
+SIM_GALFRAC:  -9.000 -9.000 -9.000 -9.000 -9.000 -9.000  # F_gal/F_SNpeak for PSF=1''
+SIM_PEAKMAG:  -9.000 14.293 14.305 14.862 -9.000 -9.000  # 
+SIM_EXPOSURE:     1.0    1.0    1.0    1.0    1.0    1.0  # 
+
+
+# ============================================ 
+# TEXT LIGHT CURVE OUTPUT: 
+#
+NOBS: 8 
+NVAR: 11 
+VARLIST: MJD BAND FIELD FLUXCAL FLUXCALERR PHOTFLAG GAIN ZPT PSF SKY_SIG SIM_MAGOBS 
+OBS: 61737.1790 LSST-g DDF  1.23719e+05  2.3478e+01 4096  1.000 33.380  2.10 3.205e+01  14.7672 
+OBS: 61737.1856 LSST-i DDF  7.73524e+04  1.3058e+01 4096  1.000 34.160  1.99 1.103e+02  15.2711 
+OBS: 61737.1954 LSST-r DDF  1.40993e+05  1.6877e+01 4096  1.000 34.240  1.78 7.501e+01  14.6239 
+TRIGGER:  trigger logic satisfied at MJD_TRIGGER=61744.1328
+OBS: 61744.1335 LSST-r DDF  1.02227e+05  4.4625e+01 6144  1.000 31.780  1.39 2.820e+01  14.9787 
+OBS: 61744.1575 LSST-i DDF  6.38933e+04  3.7055e+01 4096  1.000 31.680  1.32 3.662e+01  15.4934 
+OBS: 61760.2119 LSST-r DDF  6.83729e+04  3.7221e+01 4096  1.000 31.740  1.52 2.691e+01  15.4175 
+OBS: 61760.2360 LSST-g DDF  2.98870e+04  2.5481e+01 4096  1.000 31.670  1.76 2.022e+01  16.3094 
+OBS: 61764.2082 LSST-i DDF  5.14459e+04  2.3943e+01 4096  1.000 32.400  1.50 5.199e+01  15.7246 
+END_PHOTOMETRY: 
+
